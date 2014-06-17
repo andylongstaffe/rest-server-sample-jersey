@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse-wtp'
+
+// Just run gradle eclipse to set up the project - dont do gradle eclipseWtp
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Uncomment the ones that you want
+
+	compile 'com.sun.jersey:jersey-core:1.13'
+	compile 'com.sun.jersey:jersey-server:1.13'
+	compile 'com.sun.jersey:jersey-servlet:1.13'
+	compile 'com.sun.jersey:jersey-json:1.13'
+	providedCompile 'javax.ws.rs:javax.ws.rs-api:2.0'
+    
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
+   	
+   	testCompile 'junit:junit-dep:4.11'
+   	
+   	
+}
